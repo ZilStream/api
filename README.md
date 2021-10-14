@@ -1,6 +1,6 @@
 # API Documentation
 
-All ZilSwap pairs consist of one ZRC-2 token paired to native ZIL.
+All ZilStream pairs consist of one ZRC-2 token paired to native ZIL.
 
 The canonical address for native ZIL used by ZilStream is `zil1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq9yf6pz`.
 
@@ -8,7 +8,7 @@ Results are cached for every block (~30 seconds).
 
 ## [`/pairs`](https://api.zilstream.com/pairs)
 
-Returns data for all the registered pairs available on ZilSwap.
+Returns data for all the registered pairs available on ZilStream.
 
 ### Request
 
@@ -182,4 +182,31 @@ Returns the orderbook with depth of a given token address.
     // {...}
   ]
 }
+```
+
+## [`/summary`](https://api.zilstream.com/summary)
+
+Returns a summary overview of the available tokens.
+
+### Request
+
+`GET https://api.zilstream.com/summary`
+
+### Response
+
+```json5
+[
+  {
+    "trading_pairs": "ZWAP_ZIL",
+    "last_price": 40.693817570821096,
+    "lowest_ask": 0,
+    "highest_bid": 0,
+    "base_volume": 230033.61559308716,
+    "quote_volume": 3561034.846767968,
+    "price_change_percent_24h": -3.480268008055469,
+    "highest_price_24h": 42.35933444114199,
+    "lowest_price_24h": 40.36596701543771
+  },
+  // {...}
+]
 ```
